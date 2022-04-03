@@ -1,0 +1,28 @@
+.qtn-div{
+  display: block;
+  padding: 20px;
+}
+
+.qtn-div[wobble="1"] {
+  animation: wobble 1s 1;
+}
+@media (max-width: 280px) {
+  .qtn-div{
+    padding: 0px;
+  }
+}
+
+@keyframes wobble {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
