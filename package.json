@@ -6,7 +6,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:all": "npm run test src/tests"
   },
   "dependencies": {
     "@emotion/react": "latest",
@@ -15,12 +16,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@mui/material": "latest",
+    "canvas": "^2.9.1",
     "react": "latest",
     "react-confetti": "^6.0.1",
     "react-dom": "latest",
     "react-scripts": "latest",
     "react-use": "^17.3.2",
-    "serve": "^13.0.2",
     "shortid": "^2.2.16"
   },
   "browserslist": {
@@ -34,5 +35,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^8.12.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/react-hooks": "^7.0.1",
+    "@testing-library/user-event": "^12.1.10",
+    "jest-axe": "^6.0.0"
   }
 }

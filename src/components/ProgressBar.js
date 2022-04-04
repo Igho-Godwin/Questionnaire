@@ -7,11 +7,17 @@ import Box from "@mui/material/Box";
 
 const progressStyle = { width: "100%", mr: 1 };
 const widthStyle = { width: "100%" };
+const hideElement = { display: "none" };
 
 const LinearProgressWithLabel = ({ value }) => (
   <Box>
     <Box sx={progressStyle}>
-      <LinearProgress title="progressBar" role="progressbar" variant="determinate" value={value} />
+      <LinearProgress
+        title="progressBar"
+        role="progressbar"
+        variant="determinate"
+        value={value}
+      />
     </Box>
   </Box>
 );
@@ -36,7 +42,15 @@ const ProgressBar = React.memo(
     }, [page, progressIteratorVal]);
 
     return (
-      <Box sx={widthStyle}>
+      <Box sx={widthStyle} data-testid="progressBar">
+        <Box
+          component="span"
+          title="testbar"
+          data-testid="progress"
+          style={hideElement}
+        >
+          {progress}
+        </Box>
         <LinearProgressWithLabel value={progress} />
       </Box>
     );

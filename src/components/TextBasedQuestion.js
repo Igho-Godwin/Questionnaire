@@ -26,6 +26,7 @@ const TextBasedQuestion = ({ question, handleChange }) => (
             style={textAreaStyle}
             value={question.value || ""}
             onChange={(e) => handleChange({ e })}
+            data-testid={question.identifier}
           />
         ) : (
           <input
@@ -35,6 +36,7 @@ const TextBasedQuestion = ({ question, handleChange }) => (
             style={inputStyle}
             value={question.value || ""}
             onChange={(e) => handleChange({ e })}
+            data-testid={question.identifier}
           />
         )}
       </Grid>

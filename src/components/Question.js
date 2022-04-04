@@ -40,6 +40,7 @@ const Question = ({
       className="qtn-div"
       onAnimationEnd={() => setWobble(0)}
       wobble={wobble}
+      data-testid="Question"
     >
       <Box id="wizard_container">
         <Box id="top-wizard">
@@ -56,7 +57,9 @@ const Question = ({
               {!isDoneWithSurvey(questions[page]) && (
                 <h3 className="main_question">
                   <FontAwesomeIcon icon={faArrowRight} />
-                  &nbsp; {questions[page].headline}{" "}
+                  &nbsp; <Box component="span">
+                    {questions[page].headline}
+                  </Box>{" "}
                   {questions[page].required && (
                     <Box style={requiredSymbolStyle} component="span">
                       *
@@ -66,7 +69,7 @@ const Question = ({
               )}
               <Box>
                 {isDoneWithSurvey(questions[page]) && (
-                  <Box component="h1">
+                  <Box component="h1" data-testid="SurveyComplete">
                     {" "}
                     <Confetti width={width} height={height} />
                     Survey Complete Thank You
@@ -86,7 +89,9 @@ const Question = ({
                   />
                 )}
                 {nextButtonDisabled && (
-                  <Alert severity="warning">Please fill this in</Alert>
+                  <Alert data-testid="Alert-warning" severity="warning">
+                    Please fill this in
+                  </Alert>
                 )}
               </Box>
             </Box>
@@ -101,6 +106,7 @@ const Question = ({
                 type="button"
                 name="backward"
                 className="backward"
+                data-testid="prevBtn"
               >
                 Prev
               </button>
@@ -113,6 +119,7 @@ const Question = ({
               type="button"
               name="forward"
               className="forward"
+              data-testid="nextBtn"
             >
               {questions.length - 1 === page ? "Finish" : "Next"}
             </button>

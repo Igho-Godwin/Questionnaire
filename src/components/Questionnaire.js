@@ -1,14 +1,10 @@
-import React, { useState,lazy, Suspense } from "react";
-
-import { useLocalStorage } from "react-use";
+import React, { useState } from "react";
 
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
 import SideBar from "./SideBar";
-const Question = lazy(() => import('./Question'));
-
-import questionnaire_data from "../questionnaire.json";
+import Question from "./Question";
 
 const questionnaireParentStyle = {
   height: "100vh",
@@ -19,37 +15,15 @@ const questionnaireParentStyle = {
 
 const sideBarStyle = { backgroundColor: "#2955a8" };
 
-const renderLoader = () => <p>Loading</p>;
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {hasError: false};
-  }
-
-  static getDerivedStateFromError(error) {
-    return {hasError: true};
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <p>Loading failed! Please reload.</p>;
-    }
-
-    return this.props.children;
-  }
-}
-
-
-const Questionnaire = () => {
+const Questionnaire = ({
+  questionnaire,
+  setQuestionnaire,
+  defaultQuestionnaire,
+}) => {
   const [page, setPage] = useState(0);
   const [nextButtonDisabled, setNextButtonDisabled] = useState(false);
 
   const [wobble, setWobble] = useState(0); // for animation
-  const [questionnaire, setQuestionnaire] = useLocalStorage(
-    "questionnaire",
-    questionnaire_data["questionnaire"]
-  );
 
   const nextPage = () => {
     const isDisabled =
@@ -185,13 +159,11 @@ const Questionnaire = () => {
   };
 
   const resetQuestionnaire = () => {
-    setQuestionnaire(questionnaire_data["questionnaire"]);
+    setQuestionnaire(defaultQuestionnaire);
     setPage(0);
   };
 
   return (
-    <ErrorBoundary>
-    <Suspense fallback={renderLoader()}>
     <Box style={questionnaireParentStyle}>
       <Box id="form_container">
         <Grid container spacing={0}>
@@ -218,8 +190,6 @@ const Questionnaire = () => {
         </Grid>
       </Box>
     </Box>
-    </Suspense>
-  </ErrorBoundary>
   );
 };
 
