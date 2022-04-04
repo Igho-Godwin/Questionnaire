@@ -1,46 +1,45 @@
 {
-    "questionnaire": {
-      "id": 40,
-      "identifier": "ewBzTS",
-      "name": "Privathaftpflichtversicherung",
-      "questions": [
-        {
-          "question_type": "multiple-choice",
-          "identifier": "list_12110962",
-          "headline": "Wen möchtest Du versichern?",
-          "description": null,
-          "required": false,
-          "multiple": "true",
-          "choices": [
-            {
-              "label": "Meine Familie mit Kindern",
-              "value": "Meine Familie mit Kindern",
-              "selected": false
-            },
-            {
-              "label": "Meine Familie ohne Kinder",
-              "value": "Meine Familie ohne Kinder",
-              "selected": false
-            },
-            {
-              "label": "Mich ohne Kind",
-              "value": "Mich ohne Kind",
-              "selected": false
-            },
-            {
-              "label": "Mich mit Kind",
-              "value": "Mich mit Kind",
-              "selected": false
-            },
-            {
-              "label": "Mich und meinen Lebenspartner",
-              "value": "Mich und meinen Lebenspartner",
-              "selected": false
-            }
-          ],
-          "jumps": []
-        }
-        ]
+  "questionnaire": {
+    "id": 40,
+    "identifier": "ewBzTS",
+    "name": "Privathaftpflichtversicherung",
+    "questions": [
+      {
+        "question_type": "multiple-choice",
+        "identifier": "list_12110962",
+        "headline": "Wen möchtest Du versichern?",
+        "description": null,
+        "required": false,
+        "multiple": "true",
+        "choices": [
+          {
+            "label": "Meine Familie mit Kindern",
+            "value": "Meine Familie mit Kindern",
+            "selected": false
+          },
+          {
+            "label": "Meine Familie ohne Kinder",
+            "value": "Meine Familie ohne Kinder",
+            "selected": false
+          },
+          {
+            "label": "Mich ohne Kind",
+            "value": "Mich ohne Kind",
+            "selected": false
+          },
+          {
+            "label": "Mich mit Kind",
+            "value": "Mich mit Kind",
+            "selected": false
+          },
+          {
+            "label": "Mich und meinen Lebenspartner",
+            "value": "Mich und meinen Lebenspartner",
+            "selected": false
+          }
+        ],
+        "jumps": []
+      }
+    ]
   }
 }
-  

@@ -1,4 +1,4 @@
-.qtn-div{
+.qtn-div {
   display: block;
   padding: 20px;
 }
@@ -7,7 +7,7 @@
   animation: wobble 1s 1;
 }
 @media (max-width: 280px) {
-  .qtn-div{
+  .qtn-div {
     padding: 0px;
   }
 }

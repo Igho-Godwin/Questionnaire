@@ -87,8 +87,6 @@ h3.main_question i {
   font-weight: 400 !important;
 }
 
-
-
 /* Checkbox style */
 .container_check {
   display: block;
@@ -174,7 +172,6 @@ h3.main_question i {
   display: block;
 }
 
-
 .container_check.version_2.active,
 .container_check.version_2:hover {
   border: 1px solid #2955a9;
@@ -250,7 +247,7 @@ button.submit {
   button.backward,
   button.forward,
   button.submit {
-    margin-top:10px;
+    margin-top: 10px;
   }
 }
 
@@ -264,5 +261,3 @@ button.backward {
   background: #0f293b;
   color: #fff;
 }
-
-
