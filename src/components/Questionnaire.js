@@ -167,10 +167,10 @@ const Questionnaire = ({
     <Box style={questionnaireParentStyle}>
       <Box id="form_container">
         <Grid container spacing={0}>
-          <Grid item xs={4} style={sideBarStyle}>
+          <Grid item sm={4} xs={0} style={sideBarStyle} id="sideBar">
             <SideBar />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item sm={8} xs={12}>
             <Box>
               {typeof questionnaire.id !== "undefined" && (
                 <Question

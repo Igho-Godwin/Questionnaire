@@ -261,3 +261,9 @@ button.backward {
   background: #0f293b;
   color: #fff;
 }
+
+@media (max-width: 540px) {
+  #sideBar {
+    display: none;
+  }
+}
